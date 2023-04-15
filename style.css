@@ -1,0 +1,216 @@
+/* Custom Properties */
+
+:root {
+    --font-primary: 'Ubuntu', sans-serif;
+    --container-width: 1200px;
+
+    --color-1: #151625;
+    --color-2: #1F2030;
+    --color-3: #3D3F5F;
+    --color-3-2: rgb(87, 89, 126);
+    --color-4: #4C557D;
+    --color-5: #5A6A9A;
+    --color-6: #54AFE1;
+    --color-7: #A2CFEB;
+    --color-8: #C9DFF0;
+    --color-9: #DDE7F2;
+    --color-10: #F0EFF4;
+}
+
+/* Reset */
+
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: var(--font-primary);
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    background-color: var(--color-1);
+    color: white;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    transition: all .5s ease-out;
+}
+
+a:hover {
+    color: black;
+    font-size: 1.1rem;
+    opacity: 1;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    /* list-style: none; */
+    padding: 0;
+    margin: 0;
+}
+
+button, input {
+    outline: none;
+    transition: opacity .5s ease-out;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: .8;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Site properties */
+
+body {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    width: inherit;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 1fr 80px 80px;
+    grid-template-areas: 
+    "title title"
+    "tomas facundo"
+    "botones-t botones-f"
+    "sorteo sorteo";
+}
+
+.container h1 {
+    grid-area: title;
+    text-align: center;
+}
+
+.equipos-t {
+    grid-area: tomas;
+}
+
+.equipos-f {
+    grid-area: facundo;
+}
+
+.teams-t li,
+.teams-f li {
+    padding: .3rem;
+    position: relative;
+}
+
+.teams-t button,
+.teams-f button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 80%;
+    padding: .5;
+    margin: auto 2rem;
+
+}
+
+.equipos-f,
+.equipos-t {
+    text-align: center;
+}
+
+.botones-t {
+    grid-area: botones-t;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.botones-f {
+    grid-area: botones-f;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.botones-f input,
+.botones-f button,
+.botones-t input,
+.botones-t button {
+    padding: .5rem;
+}
+
+.botones-f input,
+.botones-t input {
+    width: 70%;
+}
+
+.sorteo {
+    grid-area: sorteo;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sorteo button {
+    padding: .5rem;
+}
+
+.container-sorteos {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(auto-fit, 1fr);
+}
+
+.container-sorteos > div {
+    background-color: var(--color-2);
+    padding: 1rem;
+    margin: .5rem;
+}
+
+.container-sorteos .equipo-tomas,
+.container-sorteos .equipo-facundo {
+    padding: .5rem 0rem;
+}
+
+.container-sorteos .partido h4{
+    color: var(--color-5);
+}
+
+.container-sorteos .equipo-tomas .present,
+.container-sorteos .equipo-facundo .present {
+    color: var(--color-5);
+}
+
+.container-sorteos .equipo-tomas .team,
+.container-sorteos .equipo-facundo .team {
+    font-weight: bold;
+    color: #54AFE1;
+}
